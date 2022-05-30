@@ -1,0 +1,10 @@
+C:\Users\Milvio\Desktop\ConnectingAccessCsharp\bin\Debug\ConnectingAccessCsharp.exe.config
+C:\Users\Milvio\Desktop\ConnectingAccessCsharp\bin\Debug\ConnectingAccessCsharp.exe
+C:\Users\Milvio\Desktop\ConnectingAccessCsharp\bin\Debug\ConnectingAccessCsharp.pdb
+C:\Users\Milvio\Desktop\ConnectingAccessCsharp\obj\Debug\ConnectingAccessCsharp.csprojAssemblyReference.cache
+C:\Users\Milvio\Desktop\ConnectingAccessCsharp\obj\Debug\ConnectingAccessCsharp.Form1.resources
+C:\Users\Milvio\Desktop\ConnectingAccessCsharp\obj\Debug\ConnectingAccessCsharp.Properties.Resources.resources
+C:\Users\Milvio\Desktop\ConnectingAccessCsharp\obj\Debug\ConnectingAccessCsharp.csproj.GenerateResource.cache
+C:\Users\Milvio\Desktop\ConnectingAccessCsharp\obj\Debug\ConnectingAccessCsharp.csproj.CoreCompileInputs.cache
+C:\Users\Milvio\Desktop\ConnectingAccessCsharp\obj\Debug\ConnectingAccessCsharp.exe
+C:\Users\Milvio\Desktop\ConnectingAccessCsharp\obj\Debug\ConnectingAccessCsharp.pdb
