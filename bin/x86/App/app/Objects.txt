@@ -1,9 +1,1 @@
-TJG
-AHW
-TSH
-DVB
-Breitscheidstrasse 40
-Waldschlösschen
-St. Josephstift
-Prager Spitze
-Tankstelle
+Test Object
