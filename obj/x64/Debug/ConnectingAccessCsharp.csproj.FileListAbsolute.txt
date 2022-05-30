@@ -1,0 +1,11 @@
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\bin\x64\Debug\ConnectingAccessCsharp.exe.config
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\bin\x64\Debug\ConnectingAccessCsharp.exe
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\bin\x64\Debug\ConnectingAccessCsharp.pdb
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\obj\x64\Debug\ConnectingAccessCsharp.csproj.AssemblyReference.cache
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\obj\x64\Debug\ConnectingAccessCsharp.csproj.SuggestedBindingRedirects.cache
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\obj\x64\Debug\ConnectingAccessCsharp.Form1.resources
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\obj\x64\Debug\ConnectingAccessCsharp.Properties.Resources.resources
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\obj\x64\Debug\ConnectingAccessCsharp.csproj.GenerateResource.cache
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\obj\x64\Debug\ConnectingAccessCsharp.csproj.CoreCompileInputs.cache
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\obj\x64\Debug\ConnectingAccessCsharp.exe
+C:\Users\DrunkLeen\Desktop\ConnectingAccessCsharp\obj\x64\Debug\ConnectingAccessCsharp.pdb

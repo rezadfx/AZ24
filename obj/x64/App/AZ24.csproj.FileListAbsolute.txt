@@ -1,0 +1,27 @@
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\bin\x64\App\ConnectingAccessCsharp.exe.config
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\bin\x64\App\ConnectingAccessCsharp.exe
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\bin\x64\App\Guna.UI2.dll
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\bin\x64\App\MetroFramework.Design.dll
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\bin\x64\App\MetroFramework.dll
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\bin\x64\App\MetroFramework.Fonts.dll
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\AZ24.csproj.AssemblyReference.cache
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\AZ24.csproj.SuggestedBindingRedirects.cache
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\ConnectingAccessCsharp.formAddUser.resources
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\ConnectingAccessCsharp.FormMsgBox.resources
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\ConnectingAccessCsharp.MainApp.resources
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\ConnectingAccessCsharp.formLogin.resources
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\ConnectingAccessCsharp.Properties.Resources.resources
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\AZ24.csproj.GenerateResource.cache
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\AZ24.csproj.CoreCompileInputs.cache
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\AZ24.csproj.CopyComplete
+C:\Users\DrunkLeen\Desktop\AZ24 2 - Copy\obj\x64\App\ConnectingAccessCsharp.exe
+C:\Users\DrunkLeen\Desktop\AZ24\obj\x64\App\AZ24.csproj.AssemblyReference.cache
+C:\Users\DrunkLeen\Desktop\AZ24\obj\x64\App\AZ24.csproj.SuggestedBindingRedirects.cache
+C:\Users\DrunkLeen\Desktop\AZ24\obj\x64\App\ConnectingAccessCsharp.formAddUser.resources
+C:\Users\DrunkLeen\Desktop\AZ24\obj\x64\App\ConnectingAccessCsharp.FormMsgBox.resources
+C:\Users\DrunkLeen\Desktop\AZ24\obj\x64\App\ConnectingAccessCsharp.MainApp.resources
+C:\Users\DrunkLeen\Desktop\AZ24\obj\x64\App\ConnectingAccessCsharp.formLogin.resources
+C:\Users\DrunkLeen\Desktop\AZ24\obj\x64\App\ConnectingAccessCsharp.Properties.Resources.resources
+C:\Users\DrunkLeen\Desktop\AZ24\obj\x64\App\AZ24.csproj.GenerateResource.cache
+C:\Users\DrunkLeen\Desktop\AZ24\obj\x64\App\AZ24.csproj.CoreCompileInputs.cache
+C:\Users\DrunkLeen\Desktop\AZ24\obj\x64\App\ConnectingAccessCsharp.exe
