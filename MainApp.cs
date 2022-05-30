@@ -530,7 +530,7 @@ namespace ConnectingAccessCsharp
 
                 OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-                openFileDialog1.InitialDirectory = "c:\\";
+                openFileDialog1.InitialDirectory = Application.StartupPath;
                 openFileDialog1.Filter = "Text files (*.mdb, *.accdb)|*.mdb;*.accdb";
                 openFileDialog1.FilterIndex = 0;
                 openFileDialog1.RestoreDirectory = true;

@@ -55,3 +55,25 @@ C:\Users\DrunkLeen\Desktop\AZ24 - Copy (2)\obj\x86\App\ConnectingAccessCsharp.fo
 C:\Users\DrunkLeen\Desktop\AZ24 - Copy (2)\bin\x86\App\AZ24a.exe.config
 C:\Users\DrunkLeen\Desktop\AZ24 - Copy (2)\bin\x86\App\AZ24a.exe
 C:\Users\DrunkLeen\Desktop\AZ24 - Copy (2)\obj\x86\App\AZ24a.exe
+C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\AZ24a.exe.config
+C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\AZ24a.exe
+C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\Guna.UI2.dll
+C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\MetroFramework.Design.dll
+C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\MetroFramework.dll
+C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\MetroFramework.Fonts.dll
+C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\System.Data.OleDb.dll
+C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\System.Data.OleDb.xml
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.AssemblyReference.cache
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.SuggestedBindingRedirects.cache
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formAddUser.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formDeleteUser.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formImportantNote.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formInputBox.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formMsgBox.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.MainApp.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formLogin.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.Properties.Resources.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.GenerateResource.cache
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.CoreCompileInputs.cache
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.CopyComplete
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24a.exe
