@@ -29,8 +29,8 @@ namespace ConnectingAccessCsharp
         public string DBPath;
 
         //****************variables for Skin *******************
-        public string varSkinMode;
-        public string varSkinSave;
+        public static string varSkinMode;
+        public static string varSkinSave;
 
 
         //public string DBPath = Application.StartupPath + "\\DB.mdb";
@@ -428,8 +428,8 @@ namespace ConnectingAccessCsharp
         private void mnuChangeUser_Click_2(object sender, EventArgs e)
         {
             formLogin form = new formLogin();
-            form.Show();
             this.Hide();
+            form.Show();
         }
 
         private void mnuExit_Click_2(object sender, EventArgs e)
@@ -440,8 +440,8 @@ namespace ConnectingAccessCsharp
         private void lblback_Click(object sender, EventArgs e)
         {
             formLogin form = new formLogin();
-            form.Show();
             this.Hide();
+            form.Show();
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)

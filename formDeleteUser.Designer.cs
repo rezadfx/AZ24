@@ -41,6 +41,8 @@
             // 
             // guna2BorderlessForm1
             // 
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 250;
             this.guna2BorderlessForm1.BorderRadius = 40;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;

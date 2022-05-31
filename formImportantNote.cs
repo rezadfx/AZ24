@@ -118,13 +118,127 @@ namespace ConnectingAccessCsharp
 
         // =======================================================================
         // =======================================================================
+
+        public void ActivateLightMode()
+        {
+            this.BackColor = Color.WhiteSmoke;
+            this.ForeColor = Color.Black;
+
+            lblDarkmode.Text = "Light Mode";
+            lblDarkmode.ForeColor = Color.FromArgb(0, 0, 0);
+
+            dropDownWorkers.BackColor = Color.FromArgb(255, 255, 255);
+            dropDownWorkers.FillColor = Color.FromArgb(255, 255, 255);
+            dropDownWorkers.ForeColor = Color.FromArgb(0, 0, 0);
+
+            dropdownObjects.BackColor = Color.FromArgb(255, 255, 255);
+            dropdownObjects.FillColor = Color.FromArgb(255, 255, 255);
+            dropdownObjects.ForeColor = Color.FromArgb(0, 0, 0);
+
+            txtTime.BackColor = Color.FromArgb(255, 255, 255);
+            txtTime.FillColor = Color.FromArgb(255, 255, 255);
+            txtTime.ForeColor = Color.FromArgb(0, 0, 0);
+
+            dataGridView.BackgroundColor = Color.FromArgb(230, 230, 230);
+            dataGridView.ForeColor = Color.FromArgb(0, 0, 0);
+
+            dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(230, 230, 230);
+            dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(0, 0, 0);
+            dataGridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(230, 230, 230);
+            dataGridView.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(0, 0, 0);
+
+            dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(230, 230, 230);
+            dataGridView.AlternatingRowsDefaultCellStyle.ForeColor = Color.FromArgb(0, 0, 0);
+            dataGridView.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(45, 171, 103);
+
+            dataGridView.DefaultCellStyle.BackColor = Color.FromArgb(200, 200, 200);
+            dataGridView.DefaultCellStyle.ForeColor = Color.FromArgb(0, 0, 0);
+
+            dataGridView.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(200, 200, 200);
+            dataGridView.RowHeadersDefaultCellStyle.ForeColor = Color.FromArgb(0, 0, 0);
+            dataGridView.RowHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(200, 200, 200);
+
+            //===============================save in file
+            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
+            varSkinSave = "Light";
+            File.WriteAllText(varSkinPath, varSkinSave);
+        }
+
+        //Activate Dark Mode
+        public void ActivateDarkMode()
+        {
+            this.BackColor = Color.FromArgb(23, 30, 40);
+            this.ForeColor = Color.FromArgb(255, 255, 255);
+
+            lblDarkmode.Text = "Dark Mode";
+            lblDarkmode.ForeColor = Color.FromArgb(255, 255, 255);
+
+            dropDownWorkers.BackColor = Color.FromArgb(23, 30, 40);
+            dropDownWorkers.FillColor = Color.FromArgb(20, 20, 30);
+            dropDownWorkers.ForeColor = Color.FromArgb(255, 255, 255);
+
+            dropdownObjects.BackColor = Color.FromArgb(23, 30, 40);
+            dropdownObjects.FillColor = Color.FromArgb(20, 20, 30);
+            dropdownObjects.ForeColor = Color.FromArgb(255, 255, 255);
+
+            txtTime.BackColor = Color.FromArgb(23, 30, 40);
+            txtTime.FillColor = Color.FromArgb(20, 20, 30);
+            txtTime.ForeColor = Color.FromArgb(255, 255, 255);
+
+            dataGridView.BackgroundColor = Color.FromArgb(20, 20, 30);
+            dataGridView.ForeColor = Color.FromArgb(255, 255, 255);
+
+            dataGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(23, 42, 59);
+            dataGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridView.ColumnHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(23, 42, 59);
+            dataGridView.ColumnHeadersDefaultCellStyle.SelectionForeColor = Color.FromArgb(255, 255, 255);
+
+            dataGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(20, 20, 30);
+            dataGridView.AlternatingRowsDefaultCellStyle.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridView.AlternatingRowsDefaultCellStyle.SelectionBackColor = Color.FromArgb(45, 171, 103);
+
+            dataGridView.DefaultCellStyle.BackColor = Color.FromArgb(23, 42, 59);
+            dataGridView.DefaultCellStyle.ForeColor = Color.FromArgb(255, 255, 255);
+
+            dataGridView.RowHeadersDefaultCellStyle.BackColor = Color.FromArgb(23, 42, 59);
+            dataGridView.RowHeadersDefaultCellStyle.ForeColor = Color.FromArgb(255, 255, 255);
+            dataGridView.RowHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(23, 42, 59);
+
+            //===============================save in file
+            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
+            varSkinSave = "Dark";
+            File.WriteAllText(varSkinPath, varSkinSave);
+
+        }
+
         // =======================================================================
+
+        public static string varSkinMode2;
+        public static string varSkinSave;
+
 
         //varSelectedObject = dropdownObjects.SelectedItem.ToString();
         //send dropdown
 
         private void formImportantNote_Load(object sender, EventArgs e)
         {
+
+            //skin
+            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
+            varSkinMode2 = File.ReadAllText(varSkinPath);
+
+            if (varSkinMode2 == "Light")
+            {
+                ActivateLightMode();
+                toggleDarlMode.Checked = false;
+
+            }
+            else if (varSkinMode2 == "Dark")
+            {
+                ActivateDarkMode();
+                toggleDarlMode.Checked = true;
+            }
+
 
             //Load Objects
             LoadObjects();
@@ -162,11 +276,6 @@ namespace ConnectingAccessCsharp
         private void txtObjectes_TextChanged(object sender, EventArgs e)
         {
 
-        }
-
-        private void toggleDarlMode_CheckedChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void guna2ComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -271,6 +380,18 @@ namespace ConnectingAccessCsharp
             {
                 timer1.Enabled = false;
                 txtTime.Enabled = true;
+            }
+        }
+
+        private void toggleDarlMode_CheckedChanged(object sender, EventArgs e)
+        {
+            if (toggleDarlMode.Checked == true)
+            {
+                ActivateDarkMode();
+            }
+            else if (toggleDarlMode.Checked == false)
+            {
+                ActivateLightMode();
             }
         }
     }

@@ -54,6 +54,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label7 = new System.Windows.Forms.Label();
             this.toggleSwitchTime = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.lblDarkmode = new System.Windows.Forms.Label();
+            this.toggleDarlMode = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -311,6 +313,8 @@
             // 
             // guna2BorderlessForm1
             // 
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 250;
             this.guna2BorderlessForm1.BorderRadius = 40;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
@@ -380,12 +384,41 @@
             this.toggleSwitchTime.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.toggleSwitchTime.CheckedChanged += new System.EventHandler(this.toggleSwitchTime_CheckedChanged);
             // 
+            // lblDarkmode
+            // 
+            this.lblDarkmode.AutoSize = true;
+            this.lblDarkmode.BackColor = System.Drawing.Color.Transparent;
+            this.lblDarkmode.ForeColor = System.Drawing.Color.White;
+            this.lblDarkmode.Location = new System.Drawing.Point(813, 21);
+            this.lblDarkmode.Name = "lblDarkmode";
+            this.lblDarkmode.Size = new System.Drawing.Size(76, 17);
+            this.lblDarkmode.TabIndex = 43;
+            this.lblDarkmode.Text = "Dark Mode";
+            // 
+            // toggleDarlMode
+            // 
+            this.toggleDarlMode.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.toggleDarlMode.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.toggleDarlMode.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.toggleDarlMode.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.toggleDarlMode.Location = new System.Drawing.Point(898, 20);
+            this.toggleDarlMode.Name = "toggleDarlMode";
+            this.toggleDarlMode.Size = new System.Drawing.Size(35, 20);
+            this.toggleDarlMode.TabIndex = 42;
+            this.toggleDarlMode.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.toggleDarlMode.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.toggleDarlMode.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.toggleDarlMode.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.toggleDarlMode.CheckedChanged += new System.EventHandler(this.toggleDarlMode_CheckedChanged);
+            // 
             // formImportantNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.lblDarkmode);
+            this.Controls.Add(this.toggleDarlMode);
             this.Controls.Add(this.toggleSwitchTime);
             this.Controls.Add(this.txtTime);
             this.Controls.Add(this.dropDownWorkers);
@@ -440,5 +473,7 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2ToggleSwitch toggleSwitchTime;
+        private System.Windows.Forms.Label lblDarkmode;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch toggleDarlMode;
     }
 }

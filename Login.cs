@@ -135,8 +135,8 @@ namespace ConnectingAccessCsharp
 
 
             MainApp form = new MainApp();
-            form.Show();
             this.Hide();
+            form.Show();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -164,8 +164,8 @@ namespace ConnectingAccessCsharp
             this.Height = 445;
             this.Width = 300;
             formAddUser form = new formAddUser();
-            form.Show();
             this.Hide();
+            form.Show();
         }
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
@@ -173,8 +173,8 @@ namespace ConnectingAccessCsharp
             this.Height = 445;
             this.Width = 300;
             formDeleteUser form = new formDeleteUser();
-            form.Show();
             this.Hide();
+            form.Show();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)
