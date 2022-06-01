@@ -80,6 +80,9 @@ namespace ConnectingAccessCsharp
             editToolStripMenuItem.BackColor = Color.FromArgb(255, 255, 255);
             editToolStripMenuItem.ForeColor = Color.FromArgb(0, 0, 0);
 
+            SearchStripMenuItem1.BackColor = Color.FromArgb(255, 255, 255);
+            SearchStripMenuItem1.ForeColor = Color.FromArgb(0, 0, 0);
+
             deleteRowToolStripMenuItem.BackColor = Color.FromArgb(255, 255, 255);
             deleteRowToolStripMenuItem.ForeColor = Color.FromArgb(0, 0, 0);
 
@@ -170,6 +173,9 @@ namespace ConnectingAccessCsharp
             editToolStripMenuItem.BackColor = Color.FromArgb(33, 52, 69);
             editToolStripMenuItem.ForeColor = Color.FromArgb(255, 255, 255);
 
+            SearchStripMenuItem1.BackColor = Color.FromArgb(33, 52, 69);
+            SearchStripMenuItem1.ForeColor = Color.FromArgb(255, 255, 255);
+
             deleteRowToolStripMenuItem.BackColor = Color.FromArgb(33, 52, 69);
             deleteRowToolStripMenuItem.ForeColor = Color.FromArgb(255, 255, 255);
 
@@ -255,6 +261,27 @@ namespace ConnectingAccessCsharp
             dataGridView.CurrentCell = dataGridView.Rows[nRowIndex].Cells[0];
 
         }
+        //******* Search Function **********
+        public void SearchList()
+        {
+            using (DataTable dt = new DataTable())
+            {
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Protocols WHERE PROTOCOL_ LIKE '" + txtSearch.Text.ToString() + "%'", conn))
+                {
+                    adapter.Fill(dt);
+                }
+                dataGridView.DataSource = dt;
+            }
+            conn.Close();
+
+            dataGridView.ClearSelection();
+            int nRowIndex = dataGridView.Rows.Count - 1;
+            dataGridView.CurrentCell = dataGridView.Rows[nRowIndex].Cells[0];
+
+        }
+
+        public static string SearchValue;
+
         //*********** refresh dataGridView *************
         public void RefreshAfterFocus()
         {
@@ -592,6 +619,61 @@ namespace ConnectingAccessCsharp
         private void toolStripMenuItem1_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+
+        private void txtObjectes_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            gpboxSearch.Visible = false;
+            gpboxSearch.Enabled = false;
+        }
+
+        private void SearchStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            gpboxSearch.Visible = true;
+            gpboxSearch.Enabled = true;
+        }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+
+
+            using (DataTable dt = new DataTable())
+            {
+                if (rdbtnID.Checked)
+                {
+                    SearchValue = "ID";
+                }
+                if (rdbtnUser.Checked)
+                {
+                    SearchValue = "USER_";
+                }
+                if (rdbtnTime.Checked)
+                {
+                    SearchValue = "TIME_";
+                }
+                if (rdbtnProtocol.Checked)
+                {
+                    SearchValue = "PROTOCOL_";
+                }
+                if (rdbtnObject.Checked)
+                {
+                    SearchValue = "OBJECT_";
+                }
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT * FROM Protocols WHERE " + SearchValue + " LIKE '" + txtSearch.Text.ToString() + "%'", conn))
+                {
+                    adapter.Fill(dt);
+                }
+                dataGridView.DataSource = dt;
+            }
+            conn.Close();
+
         }
     }
 }

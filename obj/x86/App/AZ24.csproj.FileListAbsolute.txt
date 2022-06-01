@@ -77,3 +77,4 @@ C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.GenerateResource.cache
 C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.CoreCompileInputs.cache
 C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.CopyComplete
 C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24a.exe
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formSearch.resources

@@ -119,9 +119,9 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(1013, 109);
+            this.guna2Button1.Location = new System.Drawing.Point(1030, 112);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(108, 50);
+            this.guna2Button1.Size = new System.Drawing.Size(91, 43);
             this.guna2Button1.TabIndex = 31;
             this.guna2Button1.Text = "Send";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -228,7 +228,7 @@
             this.dropdownObjects.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.dropdownObjects.ForeColor = System.Drawing.Color.White;
             this.dropdownObjects.ItemHeight = 30;
-            this.dropdownObjects.Location = new System.Drawing.Point(392, 116);
+            this.dropdownObjects.Location = new System.Drawing.Point(403, 116);
             this.dropdownObjects.Name = "dropdownObjects";
             this.dropdownObjects.Size = new System.Drawing.Size(197, 36);
             this.dropdownObjects.TabIndex = 39;
@@ -248,9 +248,9 @@
             this.dropDownWorkers.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.dropDownWorkers.ForeColor = System.Drawing.Color.White;
             this.dropDownWorkers.ItemHeight = 30;
-            this.dropDownWorkers.Location = new System.Drawing.Point(73, 116);
+            this.dropDownWorkers.Location = new System.Drawing.Point(86, 116);
             this.dropDownWorkers.Name = "dropDownWorkers";
-            this.dropDownWorkers.Size = new System.Drawing.Size(248, 36);
+            this.dropDownWorkers.Size = new System.Drawing.Size(233, 36);
             this.dropDownWorkers.TabIndex = 39;
             this.dropDownWorkers.SelectedIndexChanged += new System.EventHandler(this.guna2ComboBox1_SelectedIndexChanged);
             // 
@@ -282,7 +282,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label4.Location = new System.Drawing.Point(324, 119);
+            this.label4.Location = new System.Drawing.Point(335, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 25);
@@ -293,7 +293,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 14.25F);
-            this.label5.Location = new System.Drawing.Point(9, 119);
+            this.label5.Location = new System.Drawing.Point(19, 119);
             this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(66, 25);
@@ -304,7 +304,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(591, 119);
+            this.label6.Location = new System.Drawing.Point(616, 119);
             this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 25);
@@ -339,7 +339,7 @@
             this.txtTime.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold);
             this.txtTime.ForeColor = System.Drawing.Color.White;
             this.txtTime.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTime.Location = new System.Drawing.Point(648, 116);
+            this.txtTime.Location = new System.Drawing.Point(673, 116);
             this.txtTime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTime.Name = "txtTime";
             this.txtTime.PasswordChar = '\0';
@@ -361,7 +361,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(897, 127);
+            this.label7.Location = new System.Drawing.Point(920, 127);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(89, 17);
             this.label7.TabIndex = 38;
@@ -374,7 +374,7 @@
             this.toggleSwitchTime.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
             this.toggleSwitchTime.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.toggleSwitchTime.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.toggleSwitchTime.Location = new System.Drawing.Point(854, 127);
+            this.toggleSwitchTime.Location = new System.Drawing.Point(877, 127);
             this.toggleSwitchTime.Name = "toggleSwitchTime";
             this.toggleSwitchTime.Size = new System.Drawing.Size(35, 20);
             this.toggleSwitchTime.TabIndex = 41;

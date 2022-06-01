@@ -62,12 +62,22 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.toggleDarlMode = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.lblDarkmode = new System.Windows.Forms.Label();
+            this.SearchStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.lblWorkerLight = new System.Windows.Forms.Label();
             this.lblworkerDark = new System.Windows.Forms.Label();
             this.lblback = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.gpboxSearch = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.rdbtnObject = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdbtnID = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdbtnProtocol = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdbtnUser = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdbtnTime = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.mnuMain.SuspendLayout();
+            this.gpboxSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView
@@ -219,6 +229,7 @@
             this.txtObjectes.SelectedText = "";
             this.txtObjectes.Size = new System.Drawing.Size(307, 50);
             this.txtObjectes.TabIndex = 13;
+            this.txtObjectes.TextChanged += new System.EventHandler(this.txtObjectes_TextChanged);
             // 
             // btnRefresh
             // 
@@ -337,12 +348,13 @@
             // editToolStripMenuItem
             // 
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.SearchStripMenuItem1,
             this.deleteRowToolStripMenuItem,
             this.editRowToolStripMenuItem});
             this.editToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
-            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.editToolStripMenuItem.Text = "Oprtions";
             // 
             // deleteRowToolStripMenuItem
             // 
@@ -474,6 +486,17 @@
             this.lblDarkmode.TabIndex = 23;
             this.lblDarkmode.Text = "Dark Mode";
             // 
+            // SearchStripMenuItem1
+            // 
+            this.SearchStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.SearchStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.SearchStripMenuItem1.Name = "SearchStripMenuItem1";
+            this.SearchStripMenuItem1.ShortcutKeyDisplayString = "Ctrl + F";
+            this.SearchStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.SearchStripMenuItem1.Size = new System.Drawing.Size(190, 22);
+            this.SearchStripMenuItem1.Text = "Search";
+            this.SearchStripMenuItem1.Click += new System.EventHandler(this.SearchStripMenuItem1_Click);
+            // 
             // lblWorkerLight
             // 
             this.lblWorkerLight.AutoSize = true;
@@ -525,12 +548,184 @@
             this.label3.Size = new System.Drawing.Size(100, 100);
             this.label3.TabIndex = 17;
             // 
+            // gpboxSearch
+            // 
+            this.gpboxSearch.BackColor = System.Drawing.Color.Transparent;
+            this.gpboxSearch.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(30)))));
+            this.gpboxSearch.BorderRadius = 20;
+            this.gpboxSearch.Controls.Add(this.guna2Button2);
+            this.gpboxSearch.Controls.Add(this.txtSearch);
+            this.gpboxSearch.Controls.Add(this.rdbtnObject);
+            this.gpboxSearch.Controls.Add(this.rdbtnID);
+            this.gpboxSearch.Controls.Add(this.rdbtnProtocol);
+            this.gpboxSearch.Controls.Add(this.rdbtnUser);
+            this.gpboxSearch.Controls.Add(this.rdbtnTime);
+            this.gpboxSearch.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.gpboxSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(30)))));
+            this.gpboxSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gpboxSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.gpboxSearch.Location = new System.Drawing.Point(529, 43);
+            this.gpboxSearch.Name = "gpboxSearch";
+            this.gpboxSearch.Size = new System.Drawing.Size(229, 150);
+            this.gpboxSearch.TabIndex = 45;
+            this.gpboxSearch.Text = "Search";
+            this.gpboxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gpboxSearch.Visible = false;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.BackColor = System.Drawing.Color.Transparent;
+            this.txtSearch.BorderRadius = 15;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Location = new System.Drawing.Point(26, 1);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PasswordChar = '\0';
+            this.txtSearch.PlaceholderText = "Serach";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(176, 35);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.guna2TextBox1_TextChanged);
+            // 
+            // rdbtnObject
+            // 
+            this.rdbtnObject.AutoSize = true;
+            this.rdbtnObject.BackColor = System.Drawing.Color.Transparent;
+            this.rdbtnObject.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnObject.CheckedState.BorderThickness = 0;
+            this.rdbtnObject.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnObject.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbtnObject.CheckedState.InnerOffset = -4;
+            this.rdbtnObject.ForeColor = System.Drawing.Color.White;
+            this.rdbtnObject.Location = new System.Drawing.Point(132, 85);
+            this.rdbtnObject.Name = "rdbtnObject";
+            this.rdbtnObject.Size = new System.Drawing.Size(60, 19);
+            this.rdbtnObject.TabIndex = 5;
+            this.rdbtnObject.Text = "Object";
+            this.rdbtnObject.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbtnObject.UncheckedState.BorderThickness = 2;
+            this.rdbtnObject.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbtnObject.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbtnObject.UseVisualStyleBackColor = false;
+            // 
+            // rdbtnID
+            // 
+            this.rdbtnID.AutoSize = true;
+            this.rdbtnID.BackColor = System.Drawing.Color.Transparent;
+            this.rdbtnID.Checked = true;
+            this.rdbtnID.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnID.CheckedState.BorderThickness = 0;
+            this.rdbtnID.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnID.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbtnID.CheckedState.InnerOffset = -4;
+            this.rdbtnID.ForeColor = System.Drawing.Color.White;
+            this.rdbtnID.Location = new System.Drawing.Point(43, 58);
+            this.rdbtnID.Name = "rdbtnID";
+            this.rdbtnID.Size = new System.Drawing.Size(36, 19);
+            this.rdbtnID.TabIndex = 1;
+            this.rdbtnID.TabStop = true;
+            this.rdbtnID.Text = "ID";
+            this.rdbtnID.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbtnID.UncheckedState.BorderThickness = 2;
+            this.rdbtnID.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbtnID.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbtnID.UseVisualStyleBackColor = false;
+            // 
+            // rdbtnProtocol
+            // 
+            this.rdbtnProtocol.AutoSize = true;
+            this.rdbtnProtocol.BackColor = System.Drawing.Color.Transparent;
+            this.rdbtnProtocol.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnProtocol.CheckedState.BorderThickness = 0;
+            this.rdbtnProtocol.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnProtocol.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbtnProtocol.CheckedState.InnerOffset = -4;
+            this.rdbtnProtocol.ForeColor = System.Drawing.Color.White;
+            this.rdbtnProtocol.Location = new System.Drawing.Point(132, 58);
+            this.rdbtnProtocol.Name = "rdbtnProtocol";
+            this.rdbtnProtocol.Size = new System.Drawing.Size(70, 19);
+            this.rdbtnProtocol.TabIndex = 4;
+            this.rdbtnProtocol.Text = "Protocol";
+            this.rdbtnProtocol.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbtnProtocol.UncheckedState.BorderThickness = 2;
+            this.rdbtnProtocol.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbtnProtocol.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbtnProtocol.UseVisualStyleBackColor = false;
+            // 
+            // rdbtnUser
+            // 
+            this.rdbtnUser.AutoSize = true;
+            this.rdbtnUser.BackColor = System.Drawing.Color.Transparent;
+            this.rdbtnUser.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnUser.CheckedState.BorderThickness = 0;
+            this.rdbtnUser.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnUser.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbtnUser.CheckedState.InnerOffset = -4;
+            this.rdbtnUser.ForeColor = System.Drawing.Color.White;
+            this.rdbtnUser.Location = new System.Drawing.Point(43, 85);
+            this.rdbtnUser.Name = "rdbtnUser";
+            this.rdbtnUser.Size = new System.Drawing.Size(48, 19);
+            this.rdbtnUser.TabIndex = 2;
+            this.rdbtnUser.Text = "User";
+            this.rdbtnUser.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbtnUser.UncheckedState.BorderThickness = 2;
+            this.rdbtnUser.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbtnUser.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbtnUser.UseVisualStyleBackColor = false;
+            // 
+            // rdbtnTime
+            // 
+            this.rdbtnTime.AutoSize = true;
+            this.rdbtnTime.BackColor = System.Drawing.Color.Transparent;
+            this.rdbtnTime.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnTime.CheckedState.BorderThickness = 0;
+            this.rdbtnTime.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnTime.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbtnTime.CheckedState.InnerOffset = -4;
+            this.rdbtnTime.ForeColor = System.Drawing.Color.White;
+            this.rdbtnTime.Location = new System.Drawing.Point(43, 112);
+            this.rdbtnTime.Name = "rdbtnTime";
+            this.rdbtnTime.Size = new System.Drawing.Size(51, 19);
+            this.rdbtnTime.TabIndex = 3;
+            this.rdbtnTime.Text = "Time";
+            this.rdbtnTime.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbtnTime.UncheckedState.BorderThickness = 2;
+            this.rdbtnTime.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbtnTime.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbtnTime.UseVisualStyleBackColor = false;
+            // 
+            // guna2Button2
+            // 
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(132, 115);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(70, 25);
+            this.guna2Button2.TabIndex = 6;
+            this.guna2Button2.Text = "Close";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // MainApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(1301, 743);
+            this.Controls.Add(this.gpboxSearch);
             this.Controls.Add(this.lblDarkmode);
             this.Controls.Add(this.toggleDarlMode);
             this.Controls.Add(this.btnMinimize);
@@ -560,6 +755,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.mnuMain.ResumeLayout(false);
             this.mnuMain.PerformLayout();
+            this.gpboxSearch.ResumeLayout(false);
+            this.gpboxSearch.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,6 +796,15 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuRefresh;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuMinimize;
         private System.Windows.Forms.Label lblWorkerLight;
+        private System.Windows.Forms.ToolStripMenuItem SearchStripMenuItem1;
+        private Guna.UI2.WinForms.Guna2GroupBox gpboxSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbtnObject;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbtnID;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbtnProtocol;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbtnUser;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbtnTime;
+        private Guna.UI2.WinForms.Guna2Button guna2Button2;
     }
 }
 
