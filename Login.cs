@@ -70,8 +70,7 @@ namespace ConnectingAccessCsharp
             LoadUsers();
 
             //skin
-            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
-            varSkinMode = File.ReadAllText(varSkinPath);
+            varSkinMode = AZ24.Properties.Settings.Default.Skins;
 
             if (varSkinMode == "Light")
             {

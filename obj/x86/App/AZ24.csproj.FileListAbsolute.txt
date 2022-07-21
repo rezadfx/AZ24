@@ -55,8 +55,6 @@ C:\Users\DrunkLeen\Desktop\AZ24 - Copy (2)\obj\x86\App\ConnectingAccessCsharp.fo
 C:\Users\DrunkLeen\Desktop\AZ24 - Copy (2)\bin\x86\App\AZ24a.exe.config
 C:\Users\DrunkLeen\Desktop\AZ24 - Copy (2)\bin\x86\App\AZ24a.exe
 C:\Users\DrunkLeen\Desktop\AZ24 - Copy (2)\obj\x86\App\AZ24a.exe
-C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\AZ24a.exe.config
-C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\AZ24a.exe
 C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\Guna.UI2.dll
 C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\MetroFramework.Design.dll
 C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\MetroFramework.dll
@@ -72,9 +70,12 @@ C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formInputBox
 C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formMsgBox.resources
 C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.MainApp.resources
 C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formLogin.resources
-C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.Properties.Resources.resources
 C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.GenerateResource.cache
 C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.CoreCompileInputs.cache
 C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.csproj.CopyComplete
-C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24a.exe
-C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formSearch.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.formPass.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\ConnectingAccessCsharp.Form1.resources
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24.Properties.Resources.resources
+C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\AZ24app.exe.config
+C:\Users\DrunkLeen\Desktop\AZ242\bin\x86\App\AZ24app.exe
+C:\Users\DrunkLeen\Desktop\AZ242\obj\x86\App\AZ24app.exe

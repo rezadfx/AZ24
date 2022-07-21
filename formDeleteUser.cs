@@ -67,8 +67,7 @@ namespace ConnectingAccessCsharp
             LoadUsers();
 
             //skin
-            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
-            varSkinMode = File.ReadAllText(varSkinPath);
+            varSkinMode = AZ24.Properties.Settings.Default.Skins;
 
             if (varSkinMode == "Light")
             {
@@ -88,9 +87,7 @@ namespace ConnectingAccessCsharp
 
         private void label2_Click(object sender, EventArgs e)
         {
-            formLogin form = new formLogin();
-            form.Show();
-            this.Hide();
+            
         }
 
         private void btnDeleteUser_Click(object sender, EventArgs e)
@@ -134,6 +131,13 @@ namespace ConnectingAccessCsharp
             formLogin form = new formLogin();
             form.Show();
             this.Hide();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            formLogin form = new formLogin();
+            this.Close();
+            form.Show();
         }
     }
 }

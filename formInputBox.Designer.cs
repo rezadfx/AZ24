@@ -102,7 +102,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Image = global::ConnectingAccessCsharp.Properties.Resources.logo1Black;
+            this.label3.Image = global::AZ24.Properties.Resources.logo1Black;
             this.label3.Location = new System.Drawing.Point(12, 23);
             this.label3.MaximumSize = new System.Drawing.Size(500, 500);
             this.label3.MinimumSize = new System.Drawing.Size(50, 50);

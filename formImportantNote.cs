@@ -18,12 +18,9 @@ namespace ConnectingAccessCsharp
         OleDbConnection conn;
 
         //******** variables DB root **********
-        public string selectedFileName;
-        public static string varDataName;
-        public string readDBPathTxt = Application.StartupPath + "\\app\\DBroot.txt";
         public string DBPath;
         public static string varUserF3 = "";
-
+        public static string strStatus;
         public static string varSelectedObject = "";
 
 
@@ -52,7 +49,7 @@ namespace ConnectingAccessCsharp
         {
             using (DataTable dt = new DataTable())
             {
-                using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT ID, USER_, TIME_, NAME_, OBJECT_ FROM tbAnmeldungen", conn))
+                using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT ID, USER_, TIME_, NAME_, STATUS_, OBJECT_ FROM tbAnmeldungen", conn))
                 {
                     adapter.Fill(dt);
                 }
@@ -63,21 +60,10 @@ namespace ConnectingAccessCsharp
             dataGridView.ClearSelection();
             int nRowIndex = dataGridView.Rows.Count - 1;
             dataGridView.CurrentCell = dataGridView.Rows[nRowIndex].Cells[0];
+
+            this.dataGridView.Sort(this.dataGridView.Columns["ID"], ListSortDirection.Ascending);
         }
 
-        //*********** refresh dataGridView *************
-        public void RefreshAfterFocus()
-        {
-            using (DataTable dt = new DataTable())
-            {
-                using (OleDbDataAdapter adapter = new OleDbDataAdapter("SELECT ID, USER_, TIME_, NAME_, OBJECT_ FROM tbAnmeldungen", conn))
-                {
-                    adapter.Fill(dt);
-                }
-                dataGridView.DataSource = dt;
-            }
-            conn.Close();
-        }
 
         public void LoadObjects()
         {
@@ -159,9 +145,8 @@ namespace ConnectingAccessCsharp
             dataGridView.RowHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(200, 200, 200);
 
             //===============================save in file
-            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
-            varSkinSave = "Light";
-            File.WriteAllText(varSkinPath, varSkinSave);
+            AZ24.Properties.Settings.Default.Skins = "Light";
+            AZ24.Properties.Settings.Default.Save();
         }
 
         //Activate Dark Mode
@@ -205,16 +190,14 @@ namespace ConnectingAccessCsharp
             dataGridView.RowHeadersDefaultCellStyle.SelectionBackColor = Color.FromArgb(23, 42, 59);
 
             //===============================save in file
-            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
-            varSkinSave = "Dark";
-            File.WriteAllText(varSkinPath, varSkinSave);
+            AZ24.Properties.Settings.Default.Skins = "Dark";
+            AZ24.Properties.Settings.Default.Save();
 
         }
 
         // =======================================================================
 
         public static string varSkinMode2;
-        public static string varSkinSave;
 
 
         //varSelectedObject = dropdownObjects.SelectedItem.ToString();
@@ -224,8 +207,7 @@ namespace ConnectingAccessCsharp
         {
 
             //skin
-            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
-            varSkinMode2 = File.ReadAllText(varSkinPath);
+            varSkinMode2 = AZ24.Properties.Settings.Default.Skins;
 
             if (varSkinMode2 == "Light")
             {
@@ -247,7 +229,7 @@ namespace ConnectingAccessCsharp
             LoadWorkers();
 
             //databse load root
-            DBPath = File.ReadAllText(readDBPathTxt);
+            DBPath = AZ24.Properties.Settings.Default.DataBaseRoot;
 
             //getting username variable
             varUserF3 = formLogin.varUserF2;
@@ -260,15 +242,12 @@ namespace ConnectingAccessCsharp
             refreshList();
 
             //this.dataGridView.Columns["ID"].Width = 60;
-            this.dataGridView.Columns["ID"].Width = 60;
-            //this.dataGridView.Columns["Userclm"].Width = 120;
-            this.dataGridView.Columns["User_"].Width = 120;
-            //this.dataGridView.Columns["Timeclm"].Width = 170;
-            this.dataGridView.Columns["Time_"].Width = 170;
-            //this.dataGridView.Columns["Protocolclm"].Width = 700;
-            this.dataGridView.Columns["Name_"].Width = 474;
-            //this.dataGridView.Columns["Objectclm"].Width = 247;
-            this.dataGridView.Columns["Object_"].Width = 320;
+            this.dataGridView.Columns["ID"].Width = AZ24.Properties.Settings.Default.impIDWidth;
+            this.dataGridView.Columns["User_"].Width = AZ24.Properties.Settings.Default.impUserWidth;
+            this.dataGridView.Columns["Time_"].Width = AZ24.Properties.Settings.Default.impTimeWidth;
+            this.dataGridView.Columns["Name_"].Width = AZ24.Properties.Settings.Default.impNameWidth;
+            this.dataGridView.Columns["Object_"].Width = AZ24.Properties.Settings.Default.impObjectWidth;
+            this.dataGridView.Columns["Status_"].Width = AZ24.Properties.Settings.Default.impStatusWidth;
 
 
         }
@@ -285,8 +264,17 @@ namespace ConnectingAccessCsharp
 
         private void lblback_Click(object sender, EventArgs e)
         {
+
+            AZ24.Properties.Settings.Default.impIDWidth = this.dataGridView.Columns["ID"].Width;
+            AZ24.Properties.Settings.Default.impUserWidth = this.dataGridView.Columns["User_"].Width;
+            AZ24.Properties.Settings.Default.impTimeWidth = this.dataGridView.Columns["Time_"].Width;
+            AZ24.Properties.Settings.Default.impNameWidth = this.dataGridView.Columns["Name_"].Width;
+            AZ24.Properties.Settings.Default.impObjectWidth = this.dataGridView.Columns["Object_"].Width;
+            AZ24.Properties.Settings.Default.impStatusWidth = this.dataGridView.Columns["Status_"].Width;
+            AZ24.Properties.Settings.Default.Save();
+
             MainApp frm = new MainApp();
-            this.Hide();
+            this.Close();
             frm.Show();
         }
 
@@ -297,6 +285,14 @@ namespace ConnectingAccessCsharp
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            AZ24.Properties.Settings.Default.impIDWidth = this.dataGridView.Columns["ID"].Width;
+            AZ24.Properties.Settings.Default.impUserWidth = this.dataGridView.Columns["User_"].Width;
+            AZ24.Properties.Settings.Default.impTimeWidth = this.dataGridView.Columns["Time_"].Width;
+            AZ24.Properties.Settings.Default.impNameWidth = this.dataGridView.Columns["Name_"].Width;
+            AZ24.Properties.Settings.Default.impObjectWidth = this.dataGridView.Columns["Object_"].Width;
+            AZ24.Properties.Settings.Default.impStatusWidth = this.dataGridView.Columns["Status_"].Width;
+            AZ24.Properties.Settings.Default.Save(); 
+            
             Application.Exit();
         }
 
@@ -309,10 +305,20 @@ namespace ConnectingAccessCsharp
             string strWorker = dropDownWorkers.SelectedItem.ToString();
             string strObject = dropdownObjects.SelectedItem.ToString();
 
+            if (rdbtnAb.Checked)
+            {
+                strStatus = "Abmeldung";
+            }
+            else if (rdbtnAn.Checked)
+            {
+                strStatus = "Anmeldung";
+            }
+
+
             if (strWorker != "" && strClock != "" && strObject != "")
             {
                 
-                string strQuery = "INSERT INTO tbAnmeldungen (USER_, TIME_, NAME_, OBJECT_) VALUES ('" + strUsernames + "','" + strClock + "','" + strWorker + "','" + strObject + "')";
+                string strQuery = "INSERT INTO tbAnmeldungen (USER_, TIME_, NAME_, STATUS_, OBJECT_) VALUES ('" + strUsernames + "','" + strClock + "','" + strWorker + "','" + strStatus + "','" + strObject + "')";
 
                 ConnectToDB();
 

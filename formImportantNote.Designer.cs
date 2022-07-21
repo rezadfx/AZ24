@@ -56,6 +56,8 @@
             this.toggleSwitchTime = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.lblDarkmode = new System.Windows.Forms.Label();
             this.toggleDarlMode = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.rdbtnAn = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.rdbtnAb = new Guna.UI2.WinForms.Guna2RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,7 +132,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 9.75F);
-            this.label1.Location = new System.Drawing.Point(132, 50);
+            this.label1.Location = new System.Drawing.Point(131, 21);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 17);
@@ -140,7 +142,7 @@
             // lblUsers
             // 
             this.lblUsers.AutoSize = true;
-            this.lblUsers.Location = new System.Drawing.Point(224, 50);
+            this.lblUsers.Location = new System.Drawing.Point(223, 21);
             this.lblUsers.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblUsers.Name = "lblUsers";
             this.lblUsers.Size = new System.Drawing.Size(35, 17);
@@ -258,7 +260,7 @@
             // 
             this.lblback.AutoSize = true;
             this.lblback.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblback.Image = global::ConnectingAccessCsharp.Properties.Resources.backbtn;
+            this.lblback.Image = global::AZ24.Properties.Resources.backbtn;
             this.lblback.Location = new System.Drawing.Point(29, 37);
             this.lblback.MaximumSize = new System.Drawing.Size(55, 30);
             this.lblback.MinimumSize = new System.Drawing.Size(55, 30);
@@ -270,7 +272,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Image = global::ConnectingAccessCsharp.Properties.Resources.logo;
+            this.label3.Image = global::AZ24.Properties.Resources.logo;
             this.label3.Location = new System.Drawing.Point(950, 9);
             this.label3.MaximumSize = new System.Drawing.Size(500, 500);
             this.label3.MinimumSize = new System.Drawing.Size(100, 100);
@@ -411,12 +413,52 @@
             this.toggleDarlMode.UncheckedState.InnerColor = System.Drawing.Color.White;
             this.toggleDarlMode.CheckedChanged += new System.EventHandler(this.toggleDarlMode_CheckedChanged);
             // 
+            // rdbtnAn
+            // 
+            this.rdbtnAn.AutoSize = true;
+            this.rdbtnAn.Checked = true;
+            this.rdbtnAn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnAn.CheckedState.BorderThickness = 0;
+            this.rdbtnAn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnAn.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbtnAn.CheckedState.InnerOffset = -4;
+            this.rdbtnAn.Location = new System.Drawing.Point(100, 82);
+            this.rdbtnAn.Name = "rdbtnAn";
+            this.rdbtnAn.Size = new System.Drawing.Size(98, 21);
+            this.rdbtnAn.TabIndex = 44;
+            this.rdbtnAn.TabStop = true;
+            this.rdbtnAn.Text = "Anmeldung";
+            this.rdbtnAn.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbtnAn.UncheckedState.BorderThickness = 2;
+            this.rdbtnAn.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbtnAn.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
+            // rdbtnAb
+            // 
+            this.rdbtnAb.AutoSize = true;
+            this.rdbtnAb.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnAb.CheckedState.BorderThickness = 0;
+            this.rdbtnAb.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.rdbtnAb.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbtnAb.CheckedState.InnerOffset = -4;
+            this.rdbtnAb.Location = new System.Drawing.Point(204, 82);
+            this.rdbtnAb.Name = "rdbtnAb";
+            this.rdbtnAb.Size = new System.Drawing.Size(98, 21);
+            this.rdbtnAb.TabIndex = 45;
+            this.rdbtnAb.Text = "Abmeldung";
+            this.rdbtnAb.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbtnAb.UncheckedState.BorderThickness = 2;
+            this.rdbtnAb.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbtnAb.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            // 
             // formImportantNote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1150, 664);
+            this.Controls.Add(this.rdbtnAb);
+            this.Controls.Add(this.rdbtnAn);
             this.Controls.Add(this.lblDarkmode);
             this.Controls.Add(this.toggleDarlMode);
             this.Controls.Add(this.toggleSwitchTime);
@@ -475,5 +517,7 @@
         private Guna.UI2.WinForms.Guna2ToggleSwitch toggleSwitchTime;
         private System.Windows.Forms.Label lblDarkmode;
         private Guna.UI2.WinForms.Guna2ToggleSwitch toggleDarlMode;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbtnAb;
+        private Guna.UI2.WinForms.Guna2RadioButton rdbtnAn;
     }
 }

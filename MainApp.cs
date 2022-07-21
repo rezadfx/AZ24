@@ -22,11 +22,11 @@ namespace ConnectingAccessCsharp
         public static string varUserF1 = "";
         public static int varSwitchUser = 0;
 
+        public static string varSorting = AZ24.Properties.Settings.Default.mainSorting;
+
         //******** variables DB root **********
         public string selectedFileName;
-        public static string varDataName;
-        public string readDBPathTxt = Application.StartupPath + "\\app\\DBroot.txt";
-        public string DBPath;
+        public static string DBPath;
 
         //****************variables for Skin *******************
         public static string varSkinMode;
@@ -95,6 +95,24 @@ namespace ConnectingAccessCsharp
             changeDataBaseRootToolStripMenuItem.BackColor = Color.FromArgb(255, 255, 255);
             changeDataBaseRootToolStripMenuItem.ForeColor = Color.FromArgb(0, 0, 0);
 
+            toolStripMenuSort.BackColor = Color.FromArgb(255, 255, 255);
+            toolStripMenuSort.ForeColor = Color.FromArgb(0, 0, 0);
+
+            sortByID.BackColor = Color.FromArgb(255, 255, 255);
+            sortByID.ForeColor = Color.FromArgb(0, 0, 0);
+
+            sortByUSER.BackColor = Color.FromArgb(255, 255, 255);
+            sortByUSER.ForeColor = Color.FromArgb(0, 0, 0);
+
+            sortByTime.BackColor = Color.FromArgb(255, 255, 255);
+            sortByTime.ForeColor = Color.FromArgb(0, 0, 0);
+
+            sortByObject.BackColor = Color.FromArgb(255, 255, 255);
+            sortByObject.ForeColor = Color.FromArgb(0, 0, 0);
+
+            sortByProtocol.BackColor = Color.FromArgb(255, 255, 255);
+            sortByProtocol.ForeColor = Color.FromArgb(0, 0, 0);
+
             lightModeToolStripMenuItem.BackColor = Color.FromArgb(255, 255, 255);
             lightModeToolStripMenuItem.ForeColor = Color.FromArgb(0, 0, 0);
             lightModeToolStripMenuItem.Text = "Dark Mode";
@@ -134,9 +152,8 @@ namespace ConnectingAccessCsharp
             btnRefresh.BackColor = Color.FromArgb(255, 255, 255);
 
             //===============================save in file
-            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
-            varSkinSave = "Light";
-            File.WriteAllText(varSkinPath, varSkinSave);
+            AZ24.Properties.Settings.Default.Skins = "Light";
+            AZ24.Properties.Settings.Default.Save();
         }
 
         //Activate Dark Mode
@@ -188,6 +205,24 @@ namespace ConnectingAccessCsharp
             changeDataBaseRootToolStripMenuItem.BackColor = Color.FromArgb(33, 52, 69);
             changeDataBaseRootToolStripMenuItem.ForeColor = Color.FromArgb(255, 255, 255);
 
+            toolStripMenuSort.BackColor = Color.FromArgb(33, 52, 69);
+            toolStripMenuSort.ForeColor = Color.FromArgb(255, 255, 255);
+
+            sortByID.BackColor = Color.FromArgb(33, 52, 69);
+            sortByID.ForeColor = Color.FromArgb(255, 255, 255);
+
+            sortByUSER.BackColor = Color.FromArgb(33, 52, 69);
+            sortByUSER.ForeColor = Color.FromArgb(255, 255, 255);
+
+            sortByTime.BackColor = Color.FromArgb(33, 52, 69);
+            sortByTime.ForeColor = Color.FromArgb(255, 255, 255);
+
+            sortByObject.BackColor = Color.FromArgb(33, 52, 69);
+            sortByObject.ForeColor = Color.FromArgb(255, 255, 255);
+
+            sortByProtocol.BackColor = Color.FromArgb(33, 52, 69);
+            sortByProtocol.ForeColor = Color.FromArgb(255, 255, 255);
+
             lightModeToolStripMenuItem.BackColor = Color.FromArgb(33, 52, 69);
             lightModeToolStripMenuItem.ForeColor = Color.FromArgb(255, 255, 255);
             lightModeToolStripMenuItem.Text = "Light Mode";
@@ -227,9 +262,8 @@ namespace ConnectingAccessCsharp
             btnRefresh.BackColor = Color.FromArgb(23, 42, 59);
 
             //===============================save in file
-            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
-            varSkinSave = "Dark";
-            File.WriteAllText(varSkinPath, varSkinSave);
+            AZ24.Properties.Settings.Default.Skins = "Dark";
+            AZ24.Properties.Settings.Default.Save();
 
         }
 
@@ -260,6 +294,27 @@ namespace ConnectingAccessCsharp
             int nRowIndex = dataGridView.Rows.Count - 1;
             dataGridView.CurrentCell = dataGridView.Rows[nRowIndex].Cells[0];
 
+
+            switch (varSorting)
+            {
+                case "ID":
+                    this.dataGridView.Sort(this.dataGridView.Columns["ID"], ListSortDirection.Ascending);
+                    break;
+                case "User":
+                    this.dataGridView.Sort(this.dataGridView.Columns["User_"], ListSortDirection.Ascending);
+                    break;
+                case "Time":
+                    this.dataGridView.Sort(this.dataGridView.Columns["Time_"], ListSortDirection.Ascending);
+                    break;
+                case "Protocol":
+                    this.dataGridView.Sort(this.dataGridView.Columns["Protocol_"], ListSortDirection.Ascending);
+                    break;
+                case "Object":
+                    this.dataGridView.Sort(this.dataGridView.Columns["Object_"], ListSortDirection.Ascending);
+                    break;
+            }
+
+
         }
         //******* Search Function **********
         public void SearchList()
@@ -278,6 +333,24 @@ namespace ConnectingAccessCsharp
             int nRowIndex = dataGridView.Rows.Count - 1;
             dataGridView.CurrentCell = dataGridView.Rows[nRowIndex].Cells[0];
 
+            switch (varSorting)
+            {
+                case "ID":
+                    this.dataGridView.Sort(this.dataGridView.Columns["ID"], ListSortDirection.Ascending);
+                    break;
+                case "User":
+                    this.dataGridView.Sort(this.dataGridView.Columns["User_"], ListSortDirection.Ascending);
+                    break;
+                case "Time":
+                    this.dataGridView.Sort(this.dataGridView.Columns["Time_"], ListSortDirection.Ascending);
+                    break;
+                case "Protocol":
+                    this.dataGridView.Sort(this.dataGridView.Columns["Protocol_"], ListSortDirection.Ascending);
+                    break;
+                case "Object":
+                    this.dataGridView.Sort(this.dataGridView.Columns["Object_"], ListSortDirection.Ascending);
+                    break;
+            }
         }
 
         public static string SearchValue;
@@ -294,6 +367,8 @@ namespace ConnectingAccessCsharp
                 dataGridView.DataSource = dt;
             }
             conn.Close();
+
+            this.dataGridView.Sort(this.dataGridView.Columns["ID"], ListSortDirection.Ascending);
         }
 
 
@@ -306,9 +381,30 @@ namespace ConnectingAccessCsharp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //skin
-            var varSkinPath = Application.StartupPath + "\\app\\Skin.txt";
-            varSkinMode = File.ReadAllText(varSkinPath);
+
+            if (AZ24.Properties .Settings.Default.DataBaseRoot == ""){
+                using (OpenFileDialog openFileDialog = new OpenFileDialog())
+                {
+
+                    OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+                    openFileDialog1.InitialDirectory = Application.StartupPath;
+                    openFileDialog1.Filter = "Text files (*.mdb, *.accdb)|*.mdb;*.accdb";
+                    openFileDialog1.FilterIndex = 0;
+                    openFileDialog1.RestoreDirectory = true;
+
+                    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        selectedFileName = openFileDialog1.FileName;
+                        selectedFileName = selectedFileName.Replace(@"\", @"\\");
+
+                        AZ24.Properties.Settings.Default.DataBaseRoot = selectedFileName;
+                        AZ24.Properties.Settings.Default.Save();
+                    }
+                }
+            }
+
+            varSkinMode = AZ24.Properties.Settings.Default.Skins;
 
             if (varSkinMode == "Light")
             {
@@ -316,17 +412,18 @@ namespace ConnectingAccessCsharp
                 toggleDarlMode.Checked = false;
 
             }
-            else if (varSkinMode == "Dark")
+            else
             {
                 ActivateDarkMode();
                 toggleDarlMode.Checked = true;
             }
 
             
+            
             varSwitchUser = 1;
 
             // databse load root
-            DBPath = File.ReadAllText(readDBPathTxt);
+            DBPath = AZ24.Properties.Settings.Default.DataBaseRoot;
 
             //getting username variable
             varUserF1 = formLogin.varUserF2;
@@ -339,18 +436,53 @@ namespace ConnectingAccessCsharp
             refreshList();
 
             //dataGridView Attribs
-            //this.dataGridView.Columns["ID"].Width = 60;
-            this.dataGridView.Columns["ID"].Width = 60;
-            //this.dataGridView.Columns["Userclm"].Width = 120;
-            this.dataGridView.Columns["User_"].Width = 120;
-            //this.dataGridView.Columns["Timeclm"].Width = 170;
-            this.dataGridView.Columns["Time_"].Width = 170;
-            //this.dataGridView.Columns["Protocolclm"].Width = 700;
-            this.dataGridView.Columns["Protocol_"].Width = 700;
-            //this.dataGridView.Columns["Objectclm"].Width = 247;
-            this.dataGridView.Columns["Object_"].Width = 247;
+            this.dataGridView.Columns["ID"].Width = AZ24.Properties.Settings.Default.mainIDWidth;
+            this.dataGridView.Columns["User_"].Width = AZ24.Properties.Settings.Default.mainUserWidth;
+            this.dataGridView.Columns["Time_"].Width = AZ24.Properties.Settings.Default.mainTimeWidth;
+            this.dataGridView.Columns["Protocol_"].Width = AZ24.Properties.Settings.Default.mainProtocolWidth;
+            this.dataGridView.Columns["Object_"].Width = AZ24.Properties.Settings.Default.mainObjectWidth;
 
 
+            switch (varSorting)
+            {
+                case "ID":
+                    sortByID.Checked = true;
+                    sortByUSER.Checked = false;
+                    sortByTime.Checked = false;
+                    sortByProtocol.Checked = false;
+                    sortByObject.Checked = false;
+                    break;
+                case "User":
+                    sortByID.Checked = false;
+                    sortByUSER.Checked = true;
+                    sortByTime.Checked = false;
+                    sortByProtocol.Checked = false;
+                    sortByObject.Checked = false;
+                    break;
+                case "Time":
+                    sortByID.Checked = false;
+                    sortByUSER.Checked = false;
+                    sortByTime.Checked = true;
+                    sortByProtocol.Checked = false;
+                    sortByObject.Checked = false;
+                    break;
+                case "Protocol":
+                    sortByID.Checked = false;
+                    sortByUSER.Checked = false;
+                    sortByTime.Checked = false;
+                    sortByProtocol.Checked = true;
+                    sortByObject.Checked = false;
+                    break;
+                case "Object":
+                    sortByID.Checked = false;
+                    sortByUSER.Checked = false;
+                    sortByTime.Checked = false;
+                    sortByProtocol.Checked = false;
+                    sortByObject.Checked = true;
+                    break;
+            }
+
+            
 
         }
 
@@ -461,27 +593,32 @@ namespace ConnectingAccessCsharp
 
         private void mnuExit_Click_2(object sender, EventArgs e)
         {
+            AZ24.Properties.Settings.Default.mainIDWidth = this.dataGridView.Columns["ID"].Width;
+            AZ24.Properties.Settings.Default.mainUserWidth = this.dataGridView.Columns["User_"].Width;
+            AZ24.Properties.Settings.Default.mainTimeWidth = this.dataGridView.Columns["Time_"].Width;
+            AZ24.Properties.Settings.Default.mainProtocolWidth = this.dataGridView.Columns["Protocol_"].Width;
+            AZ24.Properties.Settings.Default.mainObjectWidth = this.dataGridView.Columns["Object_"].Width;
+            AZ24.Properties.Settings.Default.Save();
+
             Application.Exit();
         }
 
         private void lblback_Click(object sender, EventArgs e)
         {
+
+            AZ24.Properties.Settings.Default.mainIDWidth = this.dataGridView.Columns["ID"].Width;
+            AZ24.Properties.Settings.Default.mainUserWidth = this.dataGridView.Columns["User_"].Width;
+            AZ24.Properties.Settings.Default.mainTimeWidth = this.dataGridView.Columns["Time_"].Width;
+            AZ24.Properties.Settings.Default.mainProtocolWidth = this.dataGridView.Columns["Protocol_"].Width;
+            AZ24.Properties.Settings.Default.mainObjectWidth = this.dataGridView.Columns["Object_"].Width;
+            AZ24.Properties.Settings.Default.Save();
+
             formLogin form = new formLogin();
-            this.Hide();
+            this.Close();
             form.Show();
         }
 
         private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSearchByObject_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -526,6 +663,14 @@ namespace ConnectingAccessCsharp
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
+            
+            AZ24.Properties.Settings.Default.mainIDWidth = this.dataGridView.Columns["ID"].Width;
+            AZ24.Properties.Settings.Default.mainUserWidth = this.dataGridView.Columns["User_"].Width;
+            AZ24.Properties.Settings.Default.mainTimeWidth = this.dataGridView.Columns["Time_"].Width;
+            AZ24.Properties.Settings.Default.mainProtocolWidth = this.dataGridView.Columns["Protocol_"].Width;
+            AZ24.Properties.Settings.Default.mainObjectWidth = this.dataGridView.Columns["Object_"].Width;
+            AZ24.Properties.Settings.Default.Save();
+
             Application.Exit();
         }
 
@@ -567,9 +712,8 @@ namespace ConnectingAccessCsharp
                     selectedFileName = openFileDialog1.FileName;
                     selectedFileName = selectedFileName.Replace(@"\", @"\\");
 
-                    var saveDBPath = Application.StartupPath + "\\app\\DBroot.txt";
-                    File.WriteAllText(saveDBPath, selectedFileName);
-                    DBPath = File.ReadAllText(readDBPathTxt);
+                    AZ24.Properties.Settings.Default.DataBaseRoot = selectedFileName;
+                    AZ24.Properties.Settings.Default.Save();
                     ConnectToDB();
                     refreshList();
 
@@ -590,7 +734,7 @@ namespace ConnectingAccessCsharp
             {
                 ActivateDarkMode();
             }
-            else if(toggleDarlMode.Checked == false)
+            else
             {
                 ActivateLightMode();
             }
@@ -603,7 +747,7 @@ namespace ConnectingAccessCsharp
                 ActivateDarkMode();
                 toggleDarlMode.Checked = true;
             }
-            else if (lightModeToolStripMenuItem.Text == "Light Mode")
+            else
             {
                 ActivateLightMode();
                 toggleDarlMode.Checked = false;
@@ -674,6 +818,156 @@ namespace ConnectingAccessCsharp
             }
             conn.Close();
 
+        }
+
+        private void label2_Click_1(object sender, EventArgs e)
+        {
+            formPass frm = new formPass();
+            frm.Show();
+        }
+
+        private void sortByID_Click(object sender, EventArgs e)
+        {
+            if (sortByID.Checked == false)
+            {
+                sortByID.Checked = true;
+                sortByUSER.Checked = false;
+                sortByTime.Checked = false;
+                sortByProtocol.Checked = false;
+                sortByObject.Checked = false;
+                this.dataGridView.Sort(this.dataGridView.Columns["ID"], ListSortDirection.Ascending);
+
+                varSorting = "ID";
+                AZ24.Properties.Settings.Default.mainSorting = "ID";
+                AZ24.Properties.Settings.Default.Save();
+            }
+            
+        }
+
+        private void sortByUSER_Click(object sender, EventArgs e)
+        {
+            if (sortByUSER.Checked == false)
+            {
+                sortByID.Checked = false;
+                sortByUSER.Checked = true;
+                sortByTime.Checked = false;
+                sortByProtocol.Checked = false;
+                sortByObject.Checked = false;
+                this.dataGridView.Sort(this.dataGridView.Columns["USER_"], ListSortDirection.Ascending);
+
+                varSorting = "User";
+                AZ24.Properties.Settings.Default.mainSorting = "User";
+                AZ24.Properties.Settings.Default.Save();
+            }
+        }
+
+        private void sortByTime_Click(object sender, EventArgs e)
+        {
+            if (sortByTime.Checked == false)
+            {
+                sortByID.Checked = false;
+                sortByUSER.Checked = false;
+                sortByTime.Checked = true;
+                sortByProtocol.Checked = false;
+                sortByObject.Checked = false;
+                this.dataGridView.Sort(this.dataGridView.Columns["Time_"], ListSortDirection.Ascending);
+
+                varSorting = "Time";
+                AZ24.Properties.Settings.Default.mainSorting = "Time";
+                AZ24.Properties.Settings.Default.Save();
+            }
+        }
+
+        private void sortByProtocol_Click(object sender, EventArgs e)
+        {
+            if (sortByProtocol.Checked == false)
+            {
+                sortByID.Checked = false;
+                sortByUSER.Checked = false;
+                sortByTime.Checked = false;
+                sortByProtocol.Checked = true;
+                sortByObject.Checked = false;
+                this.dataGridView.Sort(this.dataGridView.Columns["Protocol_"], ListSortDirection.Ascending);
+
+                varSorting = "Protocol";
+                AZ24.Properties.Settings.Default.mainSorting = "Protocol";
+                AZ24.Properties.Settings.Default.Save();
+            }
+        }
+
+        private void sortByObject_Click(object sender, EventArgs e)
+        {
+            if (sortByObject.Checked == false)
+            {
+                sortByID.Checked = false;
+                sortByUSER.Checked = false;
+                sortByTime.Checked = false;
+                sortByProtocol.Checked = false;
+                sortByObject.Checked = true;
+                this.dataGridView.Sort(this.dataGridView.Columns["Object_"], ListSortDirection.Ascending);
+
+                varSorting = "Object";
+                AZ24.Properties.Settings.Default.mainSorting = "Object";
+                AZ24.Properties.Settings.Default.Save();
+            }
+        }
+
+        private void gpboxTimeEdit_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            gpboxTimeEdit.Visible = false;
+            gpboxTimeEdit.Enabled = false;
+        }
+
+        private void toggleSwitchTime_CheckedChanged(object sender, EventArgs e)
+        {
+
+            if (toggleSwitchTime1.Checked == true)
+            {
+                timer2.Enabled = true;
+                txtTimeEdit.Enabled = false;
+            }
+            else if (toggleSwitchTime1.Checked == false)
+            {
+                timer2.Enabled = false;
+                txtTimeEdit.Enabled = true;
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+            txtTimeEdit.Text = DateTime.Now.ToString("g");
+        }
+
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            gpboxTimeEdit.Visible = true;
+            gpboxTimeEdit.Enabled = true;
+            timer2.Enabled = true;
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            string strIDnumEdit = txtIDTimeEdit.Text;
+            string strtxtTimeEdit = txtTimeEdit.Text;
+            string strQuery = "UPDATE Protocols SET [Time_]='" + strtxtTimeEdit + "' WHERE id=" + strIDnumEdit + ";";
+
+            //MessageBox.Show(strQuery);
+            //UPDATE Table_1 SET [text_col]='Updated text', [int_col]=2014 WHERE id=2;
+
+            ConnectToDB();
+
+            OleDbCommand cmd = new OleDbCommand();
+            cmd.CommandText = strQuery;
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
+
+            conn.Close();
         }
     }
 }

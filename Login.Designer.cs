@@ -135,7 +135,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Image = global::ConnectingAccessCsharp.Properties.Resources.logo1;
+            this.label3.Image = global::AZ24.Properties.Resources.logo1;
             this.label3.Location = new System.Drawing.Point(7, 4);
             this.label3.MaximumSize = new System.Drawing.Size(500, 500);
             this.label3.MinimumSize = new System.Drawing.Size(50, 50);
@@ -225,7 +225,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
-            this.ClientSize = new System.Drawing.Size(300, 489);
+            this.ClientSize = new System.Drawing.Size(300, 421);
             this.Controls.Add(this.btnMinimize);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnDeleteUser);

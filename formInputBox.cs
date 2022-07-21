@@ -24,9 +24,8 @@ namespace ConnectingAccessCsharp
         public void ConnectToDB()
         {
             // ApplicationEXEPath\Test.mdb
-            var DBPath = Application.StartupPath + "\\DB.mdb";
-            conn = new OleDbConnection("Provider=Microsoft.Jet.OleDb.4.0;"
-                + "Data Source=" + DBPath);
+            var DBPath = AZ24.Properties.Settings.Default.DataBaseRoot;
+            conn = new OleDbConnection("Provider=Microsoft.Jet.OleDb.4.0;" + "Data Source=" + DBPath);
             conn.Open();
         }
 
@@ -176,6 +175,7 @@ namespace ConnectingAccessCsharp
 
         private void btnMsgBoxYes_Click(object sender, EventArgs e)
         {
+            
             //delete row
             if (varbtnMsgBoxButton == "Delete")
             {

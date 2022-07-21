@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ConnectingAccessCsharp.Properties {
+namespace AZ24.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ConnectingAccessCsharp.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ConnectingAccessCsharp.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("AZ24.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -136,6 +136,16 @@ namespace ConnectingAccessCsharp.Properties {
         internal static System.Drawing.Bitmap logoWhite {
             get {
                 object obj = ResourceManager.GetObject("logoWhite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pass50x50 {
+            get {
+                object obj = ResourceManager.GetObject("pass50x50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

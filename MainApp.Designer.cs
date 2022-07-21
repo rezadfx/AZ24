@@ -51,8 +51,15 @@
             this.toolStripMenuMinimize = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.SearchStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editRowToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuSort = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortByID = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortByUSER = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortByTime = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortByProtocol = new System.Windows.Forms.ToolStripMenuItem();
+            this.sortByObject = new System.Windows.Forms.ToolStripMenuItem();
             this.systemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeDataBaseRootToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lightModeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,22 +69,31 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.toggleDarlMode = new Guna.UI2.WinForms.Guna2ToggleSwitch();
             this.lblDarkmode = new System.Windows.Forms.Label();
-            this.SearchStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblWorkerLight = new System.Windows.Forms.Label();
-            this.lblworkerDark = new System.Windows.Forms.Label();
-            this.lblback = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.gpboxSearch = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.rdbtnObject = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdbtnID = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdbtnProtocol = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdbtnUser = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rdbtnTime = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblWorkerLight = new System.Windows.Forms.Label();
+            this.lblworkerDark = new System.Windows.Forms.Label();
+            this.lblback = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.gpboxTimeEdit = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.txtTimeEdit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtIDTimeEdit = new Guna.UI2.WinForms.Guna2TextBox();
+            this.toggleSwitchTime1 = new Guna.UI2.WinForms.Guna2ToggleSwitch();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.mnuMain.SuspendLayout();
             this.gpboxSearch.SuspendLayout();
+            this.gpboxTimeEdit.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView
@@ -293,6 +309,7 @@
             // 
             // fileToolStripMenuItem
             // 
+            this.fileToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuChangeUser,
             this.toolStripMenuRefresh,
@@ -306,6 +323,7 @@
             // mnuChangeUser
             // 
             this.mnuChangeUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.mnuChangeUser.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.mnuChangeUser.ForeColor = System.Drawing.Color.White;
             this.mnuChangeUser.Name = "mnuChangeUser";
             this.mnuChangeUser.Size = new System.Drawing.Size(174, 22);
@@ -315,6 +333,7 @@
             // toolStripMenuRefresh
             // 
             this.toolStripMenuRefresh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.toolStripMenuRefresh.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripMenuRefresh.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuRefresh.Name = "toolStripMenuRefresh";
             this.toolStripMenuRefresh.ShortcutKeyDisplayString = "F5";
@@ -326,6 +345,7 @@
             // toolStripMenuMinimize
             // 
             this.toolStripMenuMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.toolStripMenuMinimize.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripMenuMinimize.ForeColor = System.Drawing.Color.White;
             this.toolStripMenuMinimize.Name = "toolStripMenuMinimize";
             this.toolStripMenuMinimize.ShortcutKeyDisplayString = "Ctrl + M";
@@ -337,6 +357,7 @@
             // mnuExit
             // 
             this.mnuExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.mnuExit.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.mnuExit.ForeColor = System.Drawing.Color.White;
             this.mnuExit.Name = "mnuExit";
             this.mnuExit.ShortcutKeyDisplayString = "Alt + F4";
@@ -347,39 +368,123 @@
             // 
             // editToolStripMenuItem
             // 
+            this.editToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.SearchStripMenuItem1,
             this.deleteRowToolStripMenuItem,
-            this.editRowToolStripMenuItem});
+            this.editRowToolStripMenuItem,
+            this.toolStripMenuSort,
+            this.toolStripMenuItem1});
             this.editToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
             this.editToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.editToolStripMenuItem.Text = "Oprtions";
             // 
+            // SearchStripMenuItem1
+            // 
+            this.SearchStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.SearchStripMenuItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.SearchStripMenuItem1.ForeColor = System.Drawing.Color.White;
+            this.SearchStripMenuItem1.Name = "SearchStripMenuItem1";
+            this.SearchStripMenuItem1.ShortcutKeyDisplayString = "Ctrl + F";
+            this.SearchStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.SearchStripMenuItem1.Size = new System.Drawing.Size(223, 22);
+            this.SearchStripMenuItem1.Text = "Search";
+            this.SearchStripMenuItem1.Click += new System.EventHandler(this.SearchStripMenuItem1_Click);
+            // 
             // deleteRowToolStripMenuItem
             // 
             this.deleteRowToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.deleteRowToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.deleteRowToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.deleteRowToolStripMenuItem.Name = "deleteRowToolStripMenuItem";
             this.deleteRowToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + Del";
             this.deleteRowToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Delete)));
-            this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.deleteRowToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.deleteRowToolStripMenuItem.Text = "Delete Row";
             this.deleteRowToolStripMenuItem.Click += new System.EventHandler(this.deleteRowToolStripMenuItem_Click);
             // 
             // editRowToolStripMenuItem
             // 
             this.editRowToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.editRowToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.editRowToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.editRowToolStripMenuItem.Name = "editRowToolStripMenuItem";
             this.editRowToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + E";
             this.editRowToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.E)));
-            this.editRowToolStripMenuItem.Size = new System.Drawing.Size(190, 22);
+            this.editRowToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.editRowToolStripMenuItem.Text = "Edit Row";
+            this.editRowToolStripMenuItem.ToolTipText = "Always Sort By: ";
             this.editRowToolStripMenuItem.Click += new System.EventHandler(this.editRowToolStripMenuItem_Click);
+            // 
+            // toolStripMenuSort
+            // 
+            this.toolStripMenuSort.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.toolStripMenuSort.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.toolStripMenuSort.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sortByID,
+            this.sortByUSER,
+            this.sortByTime,
+            this.sortByProtocol,
+            this.sortByObject});
+            this.toolStripMenuSort.ForeColor = System.Drawing.Color.White;
+            this.toolStripMenuSort.Name = "toolStripMenuSort";
+            this.toolStripMenuSort.Size = new System.Drawing.Size(223, 22);
+            this.toolStripMenuSort.Text = "Sorting";
+            // 
+            // sortByID
+            // 
+            this.sortByID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.sortByID.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.sortByID.ForeColor = System.Drawing.Color.White;
+            this.sortByID.Name = "sortByID";
+            this.sortByID.Size = new System.Drawing.Size(199, 22);
+            this.sortByID.Text = "Always Sort By ID";
+            this.sortByID.Click += new System.EventHandler(this.sortByID_Click);
+            // 
+            // sortByUSER
+            // 
+            this.sortByUSER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.sortByUSER.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.sortByUSER.ForeColor = System.Drawing.Color.White;
+            this.sortByUSER.Name = "sortByUSER";
+            this.sortByUSER.Size = new System.Drawing.Size(199, 22);
+            this.sortByUSER.Text = "Always Sort By User";
+            this.sortByUSER.Click += new System.EventHandler(this.sortByUSER_Click);
+            // 
+            // sortByTime
+            // 
+            this.sortByTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.sortByTime.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.sortByTime.ForeColor = System.Drawing.Color.White;
+            this.sortByTime.Name = "sortByTime";
+            this.sortByTime.Size = new System.Drawing.Size(199, 22);
+            this.sortByTime.Text = "Always Sort By Time";
+            this.sortByTime.Click += new System.EventHandler(this.sortByTime_Click);
+            // 
+            // sortByProtocol
+            // 
+            this.sortByProtocol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.sortByProtocol.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.sortByProtocol.ForeColor = System.Drawing.Color.White;
+            this.sortByProtocol.Name = "sortByProtocol";
+            this.sortByProtocol.Size = new System.Drawing.Size(199, 22);
+            this.sortByProtocol.Text = "Always Sort By Protocol";
+            this.sortByProtocol.Click += new System.EventHandler(this.sortByProtocol_Click);
+            // 
+            // sortByObject
+            // 
+            this.sortByObject.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
+            this.sortByObject.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.sortByObject.ForeColor = System.Drawing.Color.White;
+            this.sortByObject.Name = "sortByObject";
+            this.sortByObject.Size = new System.Drawing.Size(199, 22);
+            this.sortByObject.Text = "Always Sort By Object";
+            this.sortByObject.Click += new System.EventHandler(this.sortByObject_Click);
             // 
             // systemToolStripMenuItem
             // 
+            this.systemToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.systemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changeDataBaseRootToolStripMenuItem,
             this.lightModeToolStripMenuItem});
@@ -390,6 +495,7 @@
             // changeDataBaseRootToolStripMenuItem
             // 
             this.changeDataBaseRootToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.changeDataBaseRootToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.changeDataBaseRootToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.changeDataBaseRootToolStripMenuItem.Name = "changeDataBaseRootToolStripMenuItem";
             this.changeDataBaseRootToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -399,6 +505,7 @@
             // lightModeToolStripMenuItem
             // 
             this.lightModeToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
+            this.lightModeToolStripMenuItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.lightModeToolStripMenuItem.ForeColor = System.Drawing.Color.White;
             this.lightModeToolStripMenuItem.Name = "lightModeToolStripMenuItem";
             this.lightModeToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
@@ -486,68 +593,6 @@
             this.lblDarkmode.TabIndex = 23;
             this.lblDarkmode.Text = "Dark Mode";
             // 
-            // SearchStripMenuItem1
-            // 
-            this.SearchStripMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(52)))), ((int)(((byte)(69)))));
-            this.SearchStripMenuItem1.ForeColor = System.Drawing.Color.White;
-            this.SearchStripMenuItem1.Name = "SearchStripMenuItem1";
-            this.SearchStripMenuItem1.ShortcutKeyDisplayString = "Ctrl + F";
-            this.SearchStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.SearchStripMenuItem1.Size = new System.Drawing.Size(190, 22);
-            this.SearchStripMenuItem1.Text = "Search";
-            this.SearchStripMenuItem1.Click += new System.EventHandler(this.SearchStripMenuItem1_Click);
-            // 
-            // lblWorkerLight
-            // 
-            this.lblWorkerLight.AutoSize = true;
-            this.lblWorkerLight.BackColor = System.Drawing.Color.Transparent;
-            this.lblWorkerLight.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblWorkerLight.Image = global::ConnectingAccessCsharp.Properties.Resources.worker2;
-            this.lblWorkerLight.Location = new System.Drawing.Point(1219, 68);
-            this.lblWorkerLight.MaximumSize = new System.Drawing.Size(50, 50);
-            this.lblWorkerLight.MinimumSize = new System.Drawing.Size(50, 50);
-            this.lblWorkerLight.Name = "lblWorkerLight";
-            this.lblWorkerLight.Size = new System.Drawing.Size(50, 50);
-            this.lblWorkerLight.TabIndex = 20;
-            this.lblWorkerLight.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lblworkerDark
-            // 
-            this.lblworkerDark.AutoSize = true;
-            this.lblworkerDark.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblworkerDark.Image = global::ConnectingAccessCsharp.Properties.Resources.worker;
-            this.lblworkerDark.Location = new System.Drawing.Point(1219, 68);
-            this.lblworkerDark.MaximumSize = new System.Drawing.Size(50, 50);
-            this.lblworkerDark.MinimumSize = new System.Drawing.Size(50, 50);
-            this.lblworkerDark.Name = "lblworkerDark";
-            this.lblworkerDark.Size = new System.Drawing.Size(50, 50);
-            this.lblworkerDark.TabIndex = 20;
-            this.lblworkerDark.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lblback
-            // 
-            this.lblback.AutoSize = true;
-            this.lblback.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lblback.Image = global::ConnectingAccessCsharp.Properties.Resources.Untitled_1;
-            this.lblback.Location = new System.Drawing.Point(22, 49);
-            this.lblback.MaximumSize = new System.Drawing.Size(113, 30);
-            this.lblback.MinimumSize = new System.Drawing.Size(113, 30);
-            this.lblback.Name = "lblback";
-            this.lblback.Size = new System.Drawing.Size(113, 30);
-            this.lblback.TabIndex = 19;
-            this.lblback.Click += new System.EventHandler(this.lblback_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Image = global::ConnectingAccessCsharp.Properties.Resources.logo;
-            this.label3.Location = new System.Drawing.Point(589, 24);
-            this.label3.MaximumSize = new System.Drawing.Size(500, 500);
-            this.label3.MinimumSize = new System.Drawing.Size(100, 100);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 100);
-            this.label3.TabIndex = 17;
-            // 
             // gpboxSearch
             // 
             this.gpboxSearch.BackColor = System.Drawing.Color.Transparent;
@@ -572,10 +617,28 @@
             this.gpboxSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gpboxSearch.Visible = false;
             // 
+            // guna2Button2
+            // 
+            this.guna2Button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Button2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.guna2Button2.ForeColor = System.Drawing.Color.White;
+            this.guna2Button2.Location = new System.Drawing.Point(132, 115);
+            this.guna2Button2.Name = "guna2Button2";
+            this.guna2Button2.Size = new System.Drawing.Size(70, 25);
+            this.guna2Button2.TabIndex = 6;
+            this.guna2Button2.Text = "Close";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.Color.Transparent;
             this.txtSearch.BorderRadius = 15;
+            this.txtSearch.BorderThickness = 2;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
@@ -584,7 +647,8 @@
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtSearch.ForeColor = System.Drawing.Color.White;
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Location = new System.Drawing.Point(26, 1);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
@@ -703,21 +767,210 @@
             this.rdbtnTime.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.rdbtnTime.UseVisualStyleBackColor = false;
             // 
-            // guna2Button2
+            // label2
             // 
-            this.guna2Button2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(132, 115);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.Size = new System.Drawing.Size(70, 25);
-            this.guna2Button2.TabIndex = 6;
-            this.guna2Button2.Text = "Close";
-            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
+            this.label2.AutoSize = true;
+            this.label2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label2.Image = global::AZ24.Properties.Resources.pass50x50;
+            this.label2.Location = new System.Drawing.Point(1163, 68);
+            this.label2.MaximumSize = new System.Drawing.Size(50, 50);
+            this.label2.MinimumSize = new System.Drawing.Size(50, 50);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(50, 50);
+            this.label2.TabIndex = 46;
+            this.label2.Click += new System.EventHandler(this.label2_Click_1);
+            // 
+            // lblWorkerLight
+            // 
+            this.lblWorkerLight.AutoSize = true;
+            this.lblWorkerLight.BackColor = System.Drawing.Color.Transparent;
+            this.lblWorkerLight.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblWorkerLight.Image = global::AZ24.Properties.Resources.worker2;
+            this.lblWorkerLight.Location = new System.Drawing.Point(1219, 68);
+            this.lblWorkerLight.MaximumSize = new System.Drawing.Size(50, 50);
+            this.lblWorkerLight.MinimumSize = new System.Drawing.Size(50, 50);
+            this.lblWorkerLight.Name = "lblWorkerLight";
+            this.lblWorkerLight.Size = new System.Drawing.Size(50, 50);
+            this.lblWorkerLight.TabIndex = 20;
+            this.lblWorkerLight.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblworkerDark
+            // 
+            this.lblworkerDark.AutoSize = true;
+            this.lblworkerDark.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblworkerDark.Image = global::AZ24.Properties.Resources.worker;
+            this.lblworkerDark.Location = new System.Drawing.Point(1219, 68);
+            this.lblworkerDark.MaximumSize = new System.Drawing.Size(50, 50);
+            this.lblworkerDark.MinimumSize = new System.Drawing.Size(50, 50);
+            this.lblworkerDark.Name = "lblworkerDark";
+            this.lblworkerDark.Size = new System.Drawing.Size(50, 50);
+            this.lblworkerDark.TabIndex = 20;
+            this.lblworkerDark.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // lblback
+            // 
+            this.lblback.AutoSize = true;
+            this.lblback.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lblback.Image = global::AZ24.Properties.Resources.Untitled_1;
+            this.lblback.Location = new System.Drawing.Point(22, 49);
+            this.lblback.MaximumSize = new System.Drawing.Size(113, 30);
+            this.lblback.MinimumSize = new System.Drawing.Size(113, 30);
+            this.lblback.Name = "lblback";
+            this.lblback.Size = new System.Drawing.Size(113, 30);
+            this.lblback.TabIndex = 19;
+            this.lblback.Click += new System.EventHandler(this.lblback_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Image = global::AZ24.Properties.Resources.logo;
+            this.label3.Location = new System.Drawing.Point(589, 24);
+            this.label3.MaximumSize = new System.Drawing.Size(500, 500);
+            this.label3.MinimumSize = new System.Drawing.Size(100, 100);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 100);
+            this.label3.TabIndex = 17;
+            // 
+            // gpboxTimeEdit
+            // 
+            this.gpboxTimeEdit.BackColor = System.Drawing.Color.Transparent;
+            this.gpboxTimeEdit.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(30)))));
+            this.gpboxTimeEdit.BorderRadius = 20;
+            this.gpboxTimeEdit.Controls.Add(this.guna2Button4);
+            this.gpboxTimeEdit.Controls.Add(this.toggleSwitchTime1);
+            this.gpboxTimeEdit.Controls.Add(this.guna2Button3);
+            this.gpboxTimeEdit.Controls.Add(this.txtIDTimeEdit);
+            this.gpboxTimeEdit.Controls.Add(this.txtTimeEdit);
+            this.gpboxTimeEdit.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.gpboxTimeEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(30)))));
+            this.gpboxTimeEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gpboxTimeEdit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.gpboxTimeEdit.Location = new System.Drawing.Point(778, 43);
+            this.gpboxTimeEdit.Name = "gpboxTimeEdit";
+            this.gpboxTimeEdit.Size = new System.Drawing.Size(229, 140);
+            this.gpboxTimeEdit.TabIndex = 46;
+            this.gpboxTimeEdit.Text = "Search";
+            this.gpboxTimeEdit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.gpboxTimeEdit.Visible = false;
+            this.gpboxTimeEdit.Click += new System.EventHandler(this.gpboxTimeEdit_Click);
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2Button3.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.guna2Button3.ForeColor = System.Drawing.Color.White;
+            this.guna2Button3.Location = new System.Drawing.Point(153, 98);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(70, 25);
+            this.guna2Button3.TabIndex = 6;
+            this.guna2Button3.Text = "Close";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
+            // 
+            // txtTimeEdit
+            // 
+            this.txtTimeEdit.BackColor = System.Drawing.Color.Transparent;
+            this.txtTimeEdit.BorderRadius = 15;
+            this.txtTimeEdit.BorderThickness = 2;
+            this.txtTimeEdit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimeEdit.DefaultText = "";
+            this.txtTimeEdit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimeEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimeEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimeEdit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimeEdit.Enabled = false;
+            this.txtTimeEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.txtTimeEdit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimeEdit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtTimeEdit.ForeColor = System.Drawing.Color.White;
+            this.txtTimeEdit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimeEdit.Location = new System.Drawing.Point(26, 48);
+            this.txtTimeEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimeEdit.Name = "txtTimeEdit";
+            this.txtTimeEdit.PasswordChar = '\0';
+            this.txtTimeEdit.PlaceholderText = "Time";
+            this.txtTimeEdit.SelectedText = "";
+            this.txtTimeEdit.Size = new System.Drawing.Size(176, 35);
+            this.txtTimeEdit.TabIndex = 0;
+            // 
+            // txtIDTimeEdit
+            // 
+            this.txtIDTimeEdit.BackColor = System.Drawing.Color.Transparent;
+            this.txtIDTimeEdit.BorderRadius = 15;
+            this.txtIDTimeEdit.BorderThickness = 2;
+            this.txtIDTimeEdit.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtIDTimeEdit.DefaultText = "";
+            this.txtIDTimeEdit.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtIDTimeEdit.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtIDTimeEdit.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDTimeEdit.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtIDTimeEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(40)))));
+            this.txtIDTimeEdit.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDTimeEdit.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.txtIDTimeEdit.ForeColor = System.Drawing.Color.White;
+            this.txtIDTimeEdit.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtIDTimeEdit.Location = new System.Drawing.Point(26, 11);
+            this.txtIDTimeEdit.Margin = new System.Windows.Forms.Padding(4);
+            this.txtIDTimeEdit.Name = "txtIDTimeEdit";
+            this.txtIDTimeEdit.PasswordChar = '\0';
+            this.txtIDTimeEdit.PlaceholderText = "ID";
+            this.txtIDTimeEdit.SelectedText = "";
+            this.txtIDTimeEdit.Size = new System.Drawing.Size(176, 35);
+            this.txtIDTimeEdit.TabIndex = 0;
+            // 
+            // toggleSwitchTime1
+            // 
+            this.toggleSwitchTime1.Checked = true;
+            this.toggleSwitchTime1.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.toggleSwitchTime1.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(171)))), ((int)(((byte)(103)))));
+            this.toggleSwitchTime1.CheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.toggleSwitchTime1.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.toggleSwitchTime1.Location = new System.Drawing.Point(23, 98);
+            this.toggleSwitchTime1.Name = "toggleSwitchTime1";
+            this.toggleSwitchTime1.Size = new System.Drawing.Size(35, 20);
+            this.toggleSwitchTime1.TabIndex = 43;
+            this.toggleSwitchTime1.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.toggleSwitchTime1.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.toggleSwitchTime1.UncheckedState.InnerBorderColor = System.Drawing.Color.White;
+            this.toggleSwitchTime1.UncheckedState.InnerColor = System.Drawing.Color.White;
+            this.toggleSwitchTime1.CheckedChanged += new System.EventHandler(this.toggleSwitchTime_CheckedChanged);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(223, 22);
+            this.toolStripMenuItem1.Text = "menuTimeEdit";
+            this.toolStripMenuItem1.Visible = false;
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
+            // 
+            // guna2Button4
+            // 
+            this.guna2Button4.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button4.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button4.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button4.FillColor = System.Drawing.Color.Green;
+            this.guna2Button4.Font = new System.Drawing.Font("Nirmala UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.guna2Button4.ForeColor = System.Drawing.Color.White;
+            this.guna2Button4.Location = new System.Drawing.Point(64, 98);
+            this.guna2Button4.Name = "guna2Button4";
+            this.guna2Button4.Size = new System.Drawing.Size(83, 25);
+            this.guna2Button4.TabIndex = 44;
+            this.guna2Button4.Text = "Time Edit";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // MainApp
             // 
@@ -725,6 +978,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(42)))), ((int)(((byte)(59)))));
             this.ClientSize = new System.Drawing.Size(1301, 743);
+            this.Controls.Add(this.gpboxTimeEdit);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.gpboxSearch);
             this.Controls.Add(this.lblDarkmode);
             this.Controls.Add(this.toggleDarlMode);
@@ -757,6 +1012,7 @@
             this.mnuMain.PerformLayout();
             this.gpboxSearch.ResumeLayout(false);
             this.gpboxSearch.PerformLayout();
+            this.gpboxTimeEdit.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -805,6 +1061,21 @@
         private Guna.UI2.WinForms.Guna2RadioButton rdbtnUser;
         private Guna.UI2.WinForms.Guna2RadioButton rdbtnTime;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuSort;
+        private System.Windows.Forms.ToolStripMenuItem sortByID;
+        private System.Windows.Forms.ToolStripMenuItem sortByUSER;
+        private System.Windows.Forms.ToolStripMenuItem sortByTime;
+        private System.Windows.Forms.ToolStripMenuItem sortByProtocol;
+        private System.Windows.Forms.ToolStripMenuItem sortByObject;
+        private Guna.UI2.WinForms.Guna2GroupBox gpboxTimeEdit;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2TextBox txtIDTimeEdit;
+        private Guna.UI2.WinForms.Guna2TextBox txtTimeEdit;
+        private Guna.UI2.WinForms.Guna2ToggleSwitch toggleSwitchTime1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private Guna.UI2.WinForms.Guna2Button guna2Button4;
     }
 }
 
