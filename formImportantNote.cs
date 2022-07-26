@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.IO;
+using System.Text;
 
 namespace ConnectingAccessCsharp
 {
